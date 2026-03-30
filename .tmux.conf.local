@@ -406,6 +406,10 @@ set -g display-panes-time 2000
 # start with mouse mode enabled
 set -g mouse on
 
+# mouse scrolling speed
+bind-key -T copy-mode-vi WheelUpPane   send-keys -N 1 -X scroll-up
+bind-key -T copy-mode-vi WheelDownPane send-keys -N 1 -X scroll-down
+
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
 set -g status-keys vi
